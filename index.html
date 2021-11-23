@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event_Card</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="app.js"></script>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="bg-wrapper">
+            <div class="navbar">
+                <div class="logoWrapper">
+                    <img class="logo" src="/assets/pics/logo_dark.svg" style="height: 35%;">
+                </div>
+                <div class="navItems">
+                    <ul>
+                        <li>
+                            <a href="#">demo</a>
+                        </li>
+                        <li>
+                            <a href="#">documentation</a>
+                        </li>
+                        <li>
+                            <a href="#">support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="buyNowBtn">
+                    <button href="#">BUY NOW</button>
+                </div>
+            </div>
+            <div class="content_wrapper">
+                <div class="conference">
+                    <div class="first">2019 NATIONAL</div>
+                    <div class="second">CONFERENCE</div>
+                    <div class="third">QUEENBAY MALL, NYC</div>
+                </div>
+
+                <div class="logic_signup_form">
+                    <div class="form_wrapper">
+                        <div class="form-header">
+                            <span onclick="toggle(event)" id="login-btn">Login</span>
+                            <span onclick="toggle(event)" id="signup-btn">Signup</span>
+                        </div>
+                        <form class="login-form" id="login">
+                            <input type="text" placeholder="John Doe">
+                            <br>
+                            <input type="password" placeholder="Password">
+                            <br>
+                            <input type="email" placeholder="JohnDoe@example.com">
+                            <br>
+                            <input type="text" placeholder="Phone Number">
+                            <br>
+                            <div class="btn-wrapper" style="text-align: center;">
+                                <button type="submit">Login</button>
+                            </div>
+                        </form>
+                        <form class="signup-form" id="signup">
+                            <input type="text" placeholder="John Doe">
+                            <br>
+                            <input type="password" placeholder="Password">
+                            <br>
+                            <input type="email" placeholder="JohnDoe@example.com">
+                            <br>
+                            <input type="text" placeholder="Phone Number">
+                            <br>
+                            <div class="btn-wrapper" style="text-align: center;">
+                                <button type="submit">Signup</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function toggle(event){
+
+            let login = document.getElementById("login");
+            let signup = document.getElementById("signup");
+
+            if(event.target.id == "signup-btn"){
+                login.style.display = "none";
+                signup.style.display = "block";
+            } else {
+                login.style.display = "block";
+                signup.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
